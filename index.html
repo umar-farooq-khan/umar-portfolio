@@ -1,145 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umar Farooq Khan — Portfolio</title>
-    <style>
-        :root{
-            --bg:#0b0b0b;
-            --panel:#0f0f0f;
-            --muted:#a8a8a8;
-            --accent:#ffffff;
-            --glass: rgba(255,255,255,0.04);
-            --radius:12px;
-            --maxw:1000px;
-            font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-        }
-        html,body{height:100%;}
-        body{margin:0;background:linear-gradient(180deg,var(--bg),#070707);color:var(--accent);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
-        .container{max-width:var(--maxw);margin:36px auto;padding:28px;}
-        nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
-        .logo{margin:0;font-weight:700;letter-spacing:0.4px} 
-        nav ul{list-style:none;margin:0;padding:0;display:flex;gap:18px} 
-        nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px;padding:8px;border-radius:8px} 
-        nav a:hover{color:var(--accent);background:var(--glass)} 
-        /* Hero */
-        .hero{display:grid;grid-template-columns:1fr;gap:18px;align-items:center;padding:36px 0} 
-        .hero h1{margin:0;font-size:34px;line-height:1.05} 
-        .hero p{margin:0;color:var(--muted)} 
-        .btn{display:inline-block;margin-top:8px;padding:10px 16px;background:transparent;border:1px solid rgba(255,255,255,0.08);color:var(--accent);border-radius:10px;text-decoration:none;font-weight:600} 
-        .section{margin-top:36px;}
-        h2{margin:0 0 12px 0;font-size:20px} 
-        .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px} 
-        .card{background:linear-gradient(180deg,var(--panel),#0b0b0b);border:1px solid rgba(255,255,255,0.04);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(0,0,0,0.6);} 
-        .card h3{margin:0 0 8px 0;font-size:16px} 
-        .muted{color:var(--muted);font-size:14px} 
-        .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px} 
-        .tag{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--muted)} 
-        footer{margin-top:48px;padding:28px 0;color:var(--muted);text-align:center;font-size:14px;border-top:1px solid rgba(255,255,255,0.02);} 
-        form{display:flex;flex-direction:column;gap:10px;max-width:560px} 
-        input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);padding:12px;border-radius:8px;font-size:14px} 
-        textarea{min-height:120px;resize:vertical} 
-        .meta{font-size:13px;color:var(--muted);margin-top:10px} 
-        /* Project details styling */
-        .project-list{display:flex;flex-direction:column;gap:12px} 
-        .project-meta{margin-top:10px;color:var(--muted);font-size:13px;line-height:1.4} 
-        .kpi{margin-top:10px;padding:10px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)} 
-        @media (min-width:900px){ .hero{grid-template-columns:1fr 360px} }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Umar Farooq Khan — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f0e; /* deep charcoal */
+      --panel:#0f1413;
+      --muted:#9aa39a;
+      --cream:#f6efe9;
+      --accent:#e3971a; /* orange CTA */
+      --maxw:1200px;
+    }
+    html,body{height:100%;}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:var(--bg);color:var(--cream);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:40px 36px}
+
+    /* NAV */
+    nav{display:flex;align-items:center;gap:24px;justify-content:space-between}
+    .brand{font-family:'Playfair Display', serif;font-size:28px;font-weight:700;letter-spacing:0.6px;color:var(--cream)}
+    .nav-links{display:flex;gap:28px;align-items:center}
+    .nav-links a{color:var(--muted);text-decoration:none;font-weight:500}
+    .cta{background:var(--accent);color:#111;border-radius:10px;padding:14px 22px;font-weight:700;text-decoration:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;margin-top:48px}
+
+    .intro{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+    .accent-line{width:48px;height:2px;background:var(--accent)}
+    .small{color:var(--muted);font-size:16px}
+
+    h1{font-family:'Playfair Display', serif;font-weight:700;font-size:min(110px,10.5vw);line-height:0.92;margin:0;color:var(--cream);letter-spacing:-1px}
+    .lead{color:var(--muted);font-size:18px;margin-top:18px}
+
+    /* Right placeholder */
+    .hero-aside{width:100%;height:420px;border:12px solid rgba(255,255,255,0.06);background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+
+    /* Services / Sections */
+    .section{margin-top:64px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:transparent;border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:10px;color:var(--muted)}
+
+    footer{margin-top:80px;color:var(--muted);text-align:center;padding-bottom:40px}
+
+    /* Responsive tweaks */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .hero-aside{height:240px;margin-top:20px}
+      h1{font-size:48px}
+      nav{align-items:flex-start}
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <h2 class="logo">Umar Farooq Khan</h2>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+  <div class="wrap">
+    <nav>
+      <div style="display:flex;align-items:center;gap:28px">
+        <div class="brand">Umar.</div>
+        <div class="nav-links" style="display:none;"> <!-- kept hidden to match image minimal nav center -->
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#journal">Journal</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
 
-        <section id="home" class="hero">
-            <div>
-                <h1>Hello, I\'m Umar Farooq Khan</h1>
-                <p class="muted">Beginner Web Developer focused on clean, usable interfaces and lightweight production-ready tooling.</p>
-                <a class="btn" href="#contact">Hire Me</a>
-            </div>
-            <div style="text-align:right;color:var(--muted)">
-                <div style="font-weight:700;font-size:22px">Monochrome portfolio</div>
-                <div class="meta">Simple, minimal, and production-minded design inspired by shadcn aesthetics — black & white palette.</div>
-            </div>
-        </section>
+      <a class="cta" href="#contact">Let\'s Work Together</a>
+    </nav>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p class="muted">I\'m a beginner developer learning web design and development. I enjoy creating simple and clean websites while improving my skills every day.</p>
-        </section>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="intro">
+            <div class="accent-line" aria-hidden="true"></div>
+            <div class="small">Hello, I'm Umar Farooq Khan</div>
+          </div>
 
-        <section id="portfolio" class="section">
-            <h2>My Portfolio</h2>
-            <div class="card-grid">
-                <article class="card">
-                    <h3>COHERIFY — AI Rephrasing Tool</h3>
-                    <div class="muted">A JavaScript-based Chrome extension that rephrases text from any website using Node.js and LLM APIs. Engineered and productionized the extension and backend.</div>
-                    <div class="project-meta">
-                        Key Points:
-                        <div class="kpi">
-                            • ~100+ users (growth without marketing) <br>
-                            • Reduced inference cost by 75% in recent update <br>
-                            • Increased tokens per second (TPS) by 205% <br>
-                            • Reduced latency by 64% <br>
-                            • Managed server cost, keeping it under free tier
-                        </div>
-                    </div>
-                </article>
+          <h1>I create marketing strategies for your business that get results</h1>
+          <p class="lead">I build production-minded web experiences and tools — focused on performance, cost-efficiency, and clarity.</p>
+        </div>
 
-                <article class="card">
-                    <h3>COHERIFY — AI Rephrasing Tool (Browser)</h3>
-                    <div class="muted">Same project focused on seamless on-page integration and browser UX: rephrases copy in-place with minimal latency and low server cost.</div>
-                    <div class="project-meta">
-                        Key Points:
-                        <div class="kpi">
-                            • ~100+ users (growth without marketing) <br>
-                            • Reduced inference cost by 75% in recent update <br>
-                            • Increased tokens per second (TPS) by 205% <br>
-                            • Reduced latency by 64% <br>
-                            • Managed server cost, keeping it under free tier
-                        </div>
-                    </div>
-                </article>
+        <aside class="hero-aside" aria-hidden="true">
+          <!-- Intentionally left empty per request (placeholder for image) -->
+          <div style="text-align:center;color:var(--muted)">Image placeholder</div>
+        </aside>
+      </section>
 
-                <article class="card">
-                    <h3>Project 3 — Coming Soon</h3>
-                    <div class="muted">Placeholder for upcoming projects. I\'m continuously building and will add more production work here.</div>
-                </article>
-            </div>
-        </section>
+      <section class="section" id="portfolio">
+        <h2 style="font-family:'Playfair Display',serif;font-size:22px;margin:0 0 18px 0;color:var(--cream)">Selected Work</h2>
+        <div class="grid">
+          <div class="card">
+            <strong>COHERIFY — AI Rephrasing Tool</strong>
+            <div style="margin-top:8px;color:var(--muted);font-size:14px">A JavaScript Chrome extension and backend using Node.js and LLM APIs that rephrases copy in-place across websites.</div>
+          </div>
 
-        <section id="services" class="section">
-            <h2>Services</h2>
-            <div class="card-grid">
-                <div class="card">Web Design<div class="muted">Clean, accessible interfaces focused on content.</div></div>
-                <div class="card">Frontend Development<div class="muted">Lightweight, production-ready JavaScript with attention to performance.</div></div>
-                <div class="card">Website Maintenance<div class="muted">Monitoring, cost-aware server management, and incremental improvements.</div></div>
-            </div>
-        </section>
+          <div class="card">
+            <strong>COHERIFY — Browser Integration</strong>
+            <div style="margin-top:8px;color:var(--muted);font-size:14px">Optimized for low latency and low server costs — ~100+ users and cost reductions through engineering improvements.</div>
+          </div>
 
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <form onsubmit="event.preventDefault();alert('Thanks — message submitted (demo)')">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button class="btn" type="submit">Send Message</button>
-            </form>
-        </section>
+          <div class="card">
+            <strong>Project 3 — Coming Soon</strong>
+            <div style="margin-top:8px;color:var(--muted);font-size:14px">More production projects will be added here as I ship them.</div>
+          </div>
+        </div>
+      </section>
 
-        <footer>
-            <p>© 2026 Umar Farooq Khan. All rights reserved.</p>
-        </footer>
-    </div>
+      <section class="section" id="contact">
+        <h2 style="font-family:'Playfair Display',serif;font-size:22px;margin:0 0 18px 0;color:var(--cream)">Contact</h2>
+        <p style="color:var(--muted);max-width:680px">I\'m available for freelance work and collaborations. Use the contact form below or reach out on GitHub.</p>
+        <form style="margin-top:18px;display:flex;flex-direction:column;gap:12px;max-width:520px" onsubmit="event.preventDefault();alert('Demo submit — message sent')">
+          <input type="text" placeholder="Your name" style="padding:12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--cream)" required>
+          <input type="email" placeholder="Your email" style="padding:12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--cream)" required>
+          <textarea placeholder="Message" style="padding:12px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--cream);min-height:120px" required></textarea>
+          <button type="submit" style="background:var(--accent);border:none;padding:12px 16px;border-radius:8px;font-weight:700;cursor:pointer">Send Message</button>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>© 2026 Umar Farooq Khan</p>
+    </footer>
+  </div>
 </body>
 </html>
