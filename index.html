@@ -1,62 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Optional: Tailwind CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body style="background-color: #132F74;" class="text-white p-8">
+<body>
 
-  <main class="max-w-4xl mx-auto">
+ 
 
-    <!-- Header -->
-    <header class="mb-12">
-      <h1 class="text-4xl font-bold">Umar Farooq Khan</h1>
-      <p class="mt-4 text-gray-300">
-        AI Software Engineer working on LLMs, RAG, and AI Systems.
-      </p>
-    </header>
+    <nav>
 
-    <!-- Navigation -->
-    <nav class="mb-12">
-      <a href="#projects" class="mr-6 underline">Projects</a>
-      <a href="#thesis" class="mr-6 underline">Thesis</a>
-      <a href="#contact" class="underline">Contact</a>
+        <h2 class="logo">MyPortfolio</h2>
+
+        <ul>
+
+            <li><a href="#home">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#portfolio">Portfolio</a></li>
+
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+        </ul>
+
     </nav>
 
-    <!-- Projects -->
-    <section id="projects" class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+ 
 
-      <div class="border p-4 rounded mb-4">
-        <h3 class="text-xl font-medium">Project One</h3>
-        <p class="text-gray-300">Short description here.</p>
-      </div>
+    <!-- Home Section -->
 
-      <div class="border p-4 rounded">
-        <h3 class="text-xl font-medium">Project Two</h3>
-        <p class="text-gray-300">Short description here.</p>
-      </div>
+    <section id="home" class="section home">
+
+        <h1>Hello, I'm Your Name</h1>
+
+        <p>A Beginner Web Developer</p>
+
+        <a href="#contact" class="btn">Hire Me</a>
+
     </section>
 
-    <!-- Thesis -->
-    <section id="thesis" class="mb-12">
-      <h2 class="text-2xl font-semibold mb-4">Thesis</h2>
-      <p class="text-gray-300">
-        Enhancing search using GraphRAG for better retrieval and comprehension.
-      </p>
+ 
+
+    <!-- About Section -->
+
+    <section id="about" class="section">
+
+        <h2>About Me</h2>
+
+        <p>
+
+            I'm a beginner developer learning web design and development.
+
+            I enjoy creating simple and clean websites while improving my skills every day.
+
+        </p>
+
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-      <p>Email: umar.farooq407@gmail.com</p>
+ 
+
+    <!-- Portfolio Section -->
+
+    <section id="portfolio" class="section">
+
+        <h2>My Portfolio</h2>
+
+        <div class="grid">
+
+            <div class="card">Project 1</div>
+
+            <div class="card">Project 2</div>
+
+            <div class="card">Project 3</div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Services Section -->
+
+    <section id="services" class="section">
+
+        <h2>Services</h2>
+
+        <div class="grid">
+
+            <div class="card">Web Design</div>
+
+            <div class="card">Frontend Development</div>
+
+            <div class="card">Website Maintenance</div>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="section">
+
+        <h2>Contact Me</h2>
+
+        <form>
+
+            <input type="text" placeholder="Your Name" required>
+
+            <input type="email" placeholder="Your Email" required>
+
+            <textarea placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+    </section>
+
+ 
+
+    <footer>
+
+        <p>© 2026 Your Name. All rights reserved.</p>
+
     </footer>
 
-  </main>
+ 
 
 </body>
+
 </html>
